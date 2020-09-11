@@ -1,0 +1,10 @@
+<!--components/input-num/index.wxml-->
+<view class="input-number flex-center">
+  <view class="btn-circle {{min === inputValue ? 'disabled':''}}" bindtap="reduce">
+    <text>-</text>
+  </view>
+  <input type="number" value="{{inputValue}}" bindinput="bindKeyInput" disabled />
+  <view class="btn-circle {{max === inputValue ? 'disabled':''}}" bindtap="add">
+    <text>+</text>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<!--components/pagination/index.wxml-->
+<view>
+  <view wx:for="{{list}}" wx:for-item="item" wx:key="index">
+    <selectable item="{{item}}"></selectable>
+  </view>
+  <view wx:if="{{loading}}" class="loading">加载中...</view>
+</view>

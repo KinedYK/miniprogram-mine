@@ -1,0 +1,10 @@
+<!--components/custom-header/index.wxml-->
+<view style="height:{{statusHeight+navHeight}}px"></view>
+<view class="topbar" style="background:{{header.headerbg}}">
+  <view class="status" style="height:{{statusHeight}}px; background: {{fixedBg}};"></view>
+  <view class="navbar" style="height:{{navHeight}}px; background: {{fixedBg}};">
+    <block>
+      <slot></slot>
+    </block>
+  </view>
+</view>

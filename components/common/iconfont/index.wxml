@@ -1,0 +1,2 @@
+<!--components/common/iconfont/index.wxml-->
+<text class="iconfont {{name}}"></text>

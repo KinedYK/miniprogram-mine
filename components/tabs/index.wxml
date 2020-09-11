@@ -1,0 +1,8 @@
+<!--components/common/tabs/index.wxml-->
+<view class="tabs">
+  <scroll-view scroll-x class="scroll-view_H" scroll-with-animation scroll-left="{{navScrollLeft}}rpx">
+    <view style="width: {{width}}rpx;" class="tab scroll-view-item_H" wx:for="{{list}}" wx:key="index" data-index="{{index}}" bindtap="onTabClick">
+      <text class="tab-text {{activeTab === index ? 'activeTab': ''}}">{{item.title}}</text>
+    </view>
+  </scroll-view>
+</view>

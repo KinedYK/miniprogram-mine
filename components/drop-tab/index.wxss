@@ -1,0 +1,66 @@
+/* components/drop-tab/index.wxss */
+.drop-tab-item {
+  width: 100%;
+  font-size: 28rpx;
+  color: #1C1C1C;
+  background-color: #fff;
+}
+
+.drop-tab-item .header {
+  width: 100%;
+  display: flex;
+  background-color: #fff;
+}
+
+.title-item {
+  flex: 1 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20rpx 0;
+}
+
+.drop-tab-item .icon {
+  transform: rotate(90deg);
+  transition: transform .3s;
+}
+
+.icon-up {
+  transform: rotate(-90deg) !important;
+}
+
+.border {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: auto;
+  z-index: 5;
+  padding: 28rpx;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.mask-border {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.tab-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 0;
+}
+
+.tab-item .active {
+  color: #15A8B9 !important;
+}
+
+.tab-item:not(:last-child) {
+  border-bottom: 1rpx solid #eeeeee;
+}

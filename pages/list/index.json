@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "分页加载",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "tabs": "/components/tabs/index",
+    "pagination": "/components/pagination/index",
+    "input-num": "/components/input-num/index"
+  }
+}

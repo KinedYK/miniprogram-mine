@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "组件展示",
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tabs": "/components/tabs/index",
+    "custom-header": "/components/custom-header/index",
+    "drop-tab": "/components/drop-tab/index",
+    "input-num": "/components/input-num/index"
+  }
+}

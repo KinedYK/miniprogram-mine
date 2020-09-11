@@ -1,0 +1,16 @@
+<!--components/drop-tab/index.wxml-->
+<view class="drop-tab-item">
+  <view class="{{isShow?'mask-border':'border-close'}}" bindtap="onBorderClose"></view>
+  <view class="header title-item" bindtap="onBorderChange">
+    <text>{{currItem.title}}</text>
+    <view class="icon {{isShow?'icon-up':'icon-down'}}">
+      <i name="iconjinru" />
+    </view>
+  </view>
+  <view wx:if="{{isShow}}" class="border">
+    <view class="tab-item" wx:for="{{info}}" wx:key="index" data-item="{{item}}" bindtap="onChoose">
+      <view class="{{currItem.id === item.id ? 'active': ''}}">{{item.title}}</view>
+      <i style="display: {{currItem.id === item.id ? 'black': 'none'}}; color: #15A8B9;" name="iconduihao" />
+    </view>
+  </view>
+</view>

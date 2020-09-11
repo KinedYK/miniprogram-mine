@@ -1,0 +1,3 @@
+小程序测试号信息
+AppID wxe5be7ea35be51ff7
+AppSecret 1604ee4ee80201402b8230bfe880620a

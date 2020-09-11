@@ -1,0 +1,5 @@
+/* components/pagination/index.wxss */
+.loading{
+  display: block;
+  margin: 10rpx auto;
+}

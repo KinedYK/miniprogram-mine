@@ -1,0 +1,4 @@
+<!-- pages/list/index.wxml -->
+<view class="user-list">
+  <pagination name="0" key="{{key}}" bind:getList="getList" list="{{list}}" total="{{100}}" generic:selectable="input-num"></pagination>
+</view>
