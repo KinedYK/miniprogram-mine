@@ -1,27 +1,31 @@
-<!--pages/example/index.wxml-->
-
+<!-- pages/example/index.wxml -->
 <!-- header -->
-<custom-header >
+<custom-header>
   <view style="width: 100%;" class="flex-center">自定义头部</view>
 </custom-header>
-
 <!-- tabs -->
 <tabs list="{{list}}" />
-
 <!-- iconfont -->
 <view style="padding: 28rpx;">
   <i name="iconziyuan" />
 </view>
-
 <!-- drop-tab -->
 <view>
   <drop-tab name="0" info="{{labels}}" bind:change="onChange" bind:handleopen="onClickTabs"></drop-tab>
 </view>
-
 <!-- input-num -->
 <view style="padding: 28rpx;">
   <input-num max="10" count="{{3}}" bindchangeValue="changeValue" />
 </view>
-
-
-
+<!-- image-loader -->
+<!-- 引入图片预加载组件 -->
+<import src="../../components/img-loader/index.wxml" />
+<template is="img-loader" data="{{ imgLoadList }}"></template>
+<view style="padding: 28rpx;">
+  <view class="img_list">
+    <view wx:for="{{ imgList }}" wx:key="index" class="img_wrap">
+      <image wx:if="{{ item.loaded }}" src="{{ item.url }}" class="fade_in" />
+    </view>
+  </view>
+  <button style="font-size: 28rpx;" bindtap="loadImages">Click To Load Images</button>
+</view>
