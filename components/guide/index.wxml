@@ -1,0 +1,17 @@
+<!--components/guide/index.wxml-->
+<view wx:if="{{showGuide}}" class="guide-page" catchtouchmove="true">
+  <view class="guide-main" style="width: {{pointEle.width}}px; height: {{pointEle.height}}px; left: calc(-100vh + {{pointEle.left}}px); top: calc(-100vh + {{pointEle.top}}px);">
+    <view class="guide-border"></view>
+  </view>
+  <view wx:if="{{pointEle.top < 250}}" class="guide-tip" style="width: 100%; height: 100rpx; left: {{pointEle.left}}px; top: {{pointEle.top + pointEle.height + 12}}px;">
+    <image mode="heightFix" style="position: relative; left: {{pointEle.width / 2}}px; height: 100rpx;" src="https://cxqy-community.oss-cn-shanghai.aliyuncs.com/CDN/tinified/jt-gz%403x.png"/>
+    <view catchtap="onGuideTap">{{guideEles[guideElesIndex].tip}}</view>
+  </view>
+  <view wx:else class="guide-tip" style="left: {{pointEle.left}}px; top: calc({{pointEle.top}}px - 200rpx);">
+    <view catchtap="onGuideTap">{{guideEles[guideElesIndex].tip}}</view>
+    <image mode="heightFix" style="position: relative; left: {{pointEle.width / 2}}px; height: 140rpx;" src="https://cxqy-community.oss-cn-shanghai.aliyuncs.com/CDN/tinified/jt-csp%403x.png"/>
+  </view>
+  <!-- <view class="guide-button" catchtap="onGuideTap">
+    <view style="display: inline-block; color: #fff; font-size: 32rpx; width: 200rpx; height: 80rpx; border: 1rpx solid #fff; border-radius: 40rpx; line-height: 80rpx; text-align: center;">知道了</view>
+  </view> -->
+</view>

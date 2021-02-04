@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/example/index",
-    "pages/list/index"
+    "pages/list/index",
+    "components/guide/index"
   ],
   "usingComponents": {
     "i": "/components/common/iconfont/index"

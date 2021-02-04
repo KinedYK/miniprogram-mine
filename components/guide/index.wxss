@@ -1,0 +1,44 @@
+/* components/guide/index.wxss */
+
+.guide-page {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999999;
+}
+
+.guide-page .guide-main {
+  width: 100rpx;
+  height: 100rpx;
+  position: absolute;
+  border-radius: 1350rpx;
+  border: 100vh solid rgba(0, 0, 0, .7);
+  transition: 0.5s ease;
+}
+
+.guide-main .guide-border {
+  position: absolute;
+  top: -10rpx;
+  bottom: -10rpx;
+  left: -10rpx;
+  right: -10rpx;
+  border: 1rpx dashed #fff;
+  border-radius: 10rpx;
+}
+
+.guide-page .guide-tip {
+  position: absolute;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 100;
+}
+
+.guide-page .guide-button {
+  position: absolute;
+  bottom: 140rpx;
+  left: 0;
+  right: 0;
+  text-align: center;
+}

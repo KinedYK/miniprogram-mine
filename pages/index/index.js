@@ -8,6 +8,10 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    guideEles: [
+      {id: '#avatar', tip: '这是头像, 点这里下一步'},
+      {id: '#nickname', tip: '这是昵称, 知道了'},
+    ]
   },
   //事件处理函数
   bindViewTap: function() {
