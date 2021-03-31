@@ -1,6 +1,7 @@
 //app.js
-const request = require('./utils/request');
+const http = require('./utils/request');
 const commonApis = require('./utils/api');
+const store = require('./utils/store');
 App({
   // 全局变量
   globalData: {
@@ -8,7 +9,8 @@ App({
   },
 
   // 挂载全局属性到APP实例
-  http: request,
+  http,
+  store,
   apis: commonApis,
 
   // 小程序冷启动回调

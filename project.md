@@ -48,3 +48,7 @@ AppSecret 1604ee4ee80201402b8230bfe880620a
 ## 命名规则
 
 参考：(https://github.com/kettanaito/naming-cheatsheet/blob/master/README.md)
+
+## 状态管理
+
+wxMiniStore 参考： (https://github.com/xiaoyao96/wxMiniStore)
