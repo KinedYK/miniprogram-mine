@@ -1,5 +1,5 @@
 //app.js
-const http = require('./utils/http');
+const request = require('./utils/request');
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -42,6 +42,5 @@ App({
   },
 
   // 挂载全局属性到APP实例
-  post: http.post,
-  get: http.get,
+  http: request,
 });

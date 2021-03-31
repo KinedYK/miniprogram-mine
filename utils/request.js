@@ -19,7 +19,7 @@ function isHttpSuccess(status) {
   return (status >= 200 && status < 300) || status === 304;
 }
 
-module.exports = {
+const request = {
   http(url, method, data = {}, options = {}) {
     options = Object.assign(options, options_def);
     return new Promise((resolve, reject) => {
@@ -46,3 +46,5 @@ module.exports = {
   post: (url, data = {}, options = {}) => http(url, 'POSt', data, options),
   get: (url, data = {}, options = {}) => http(url, 'GET', data, options),
 };
+
+module.exports = request;
