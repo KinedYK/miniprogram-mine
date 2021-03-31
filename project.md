@@ -7,6 +7,8 @@ AppSecret 1604ee4ee80201402b8230bfe880620a
 ```
 ├── components (公共组件目录)
 │   ├── @anima (动画组件)
+│   ├── @common (基础组件/common/...)
+│   ├── @actions (业务组件/home/...)
 │   └── ...
 ├── images（公共图片）
 │   └── icon
