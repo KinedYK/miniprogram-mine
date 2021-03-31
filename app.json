@@ -3,13 +3,16 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/example/index",
-    "pages/list/index",
-    "components/guide/index"
+    "pages/list/index"
   ],
   "usingComponents": {
     "i": "/components/common/iconfont/index"
   },
   "tabBar": {
+    "custom": false,
+    "color": "#fff",
+    "selectedColor": "#234532",
+    "backgroundColor": "#000000",
     "list": [
       {
         "pagePath": "pages/index/index",

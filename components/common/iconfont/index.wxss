@@ -1,2 +1,2 @@
 /* components/common/iconfont/index.wxss */
-@import "/iconfont";
+@import "/styles/iconfont";

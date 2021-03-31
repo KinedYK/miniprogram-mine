@@ -1,27 +1,27 @@
-const BASE_URL = 'https://www.fastmock.site/mock/6ff5dc7c26e54825c4418249d6a0beff/api-mock'
+const BASE_URL = require('./config').API_ROOT;
 
 const options_def = {
   header: {
     'access-token': wx.getStorageSync('access-token'),
-  }
-}
+  },
+};
 
-function onSeverError (code) {
+function onSeverError(code) {
   wx.showToast({
     title: `服务器错误: ${code}`,
     icon: 'none',
-    duration: 2000
-  })
-} 
+    duration: 2000,
+  });
+}
 
 function isHttpSuccess(status) {
-  console.log(status)
-  return status >= 200 && status < 300 || status === 304;
+  console.log(status);
+  return (status >= 200 && status < 300) || status === 304;
 }
 
 module.exports = {
   http(url, method, data = {}, options = {}) {
-    options = Object.assign(options, options_def)
+    options = Object.assign(options, options_def);
     return new Promise((resolve, reject) => {
       wx.request({
         data,
@@ -29,18 +29,20 @@ module.exports = {
         url: `${BASE_URL}${url}`,
         header: options.header,
         success(res) {
-          const isSuccess = isHttpSuccess(res.statusCode)
+          const isSuccess = isHttpSuccess(res.statusCode);
           if (isSuccess) {
-            resolve(res.data)
+            resolve(res.data);
           } else {
             // TODO: 错误处理
-            onSeverError(res.statusCode)
+            onSeverError(res.statusCode);
           }
         },
         fail(err) {
-          reject(err)
-        }
-      })
-    })
-  }
-}
+          reject(err);
+        },
+      });
+    });
+  },
+  post: (url, data = {}, options = {}) => http(url, 'POSt', data, options),
+  get: (url, data = {}, options = {}) => http(url, 'GET', data, options),
+};
