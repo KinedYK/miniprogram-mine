@@ -1,6 +1,17 @@
 //app.js
 const request = require('./utils/request');
+const commonApis = require('./utils/api');
 App({
+  // 全局变量
+  globalData: {
+    userInfo: null,
+  },
+
+  // 挂载全局属性到APP实例
+  http: request,
+  apis: commonApis,
+
+  // 小程序冷启动回调
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || [];
@@ -36,11 +47,15 @@ App({
     });
   },
 
-  // 全局变量
-  globalData: {
-    userInfo: null,
+  // 小程序进入前台回调
+  onShow: function () {
+    commonApis.test();
   },
 
-  // 挂载全局属性到APP实例
-  http: request,
+  // 全局路由回调
+  listenerRoute() {
+    wx.onAppRoute((route) => {
+      console.log(route);
+    });
+  },
 });

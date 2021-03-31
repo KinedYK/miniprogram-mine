@@ -20,7 +20,7 @@ function isHttpSuccess(status) {
 }
 
 const request = {
-  http(url, method, data = {}, options = {}) {
+  http: (url, method, data = {}, options = {}) => {
     options = Object.assign(options, options_def);
     return new Promise((resolve, reject) => {
       wx.request({
@@ -43,8 +43,8 @@ const request = {
       });
     });
   },
-  post: (url, data = {}, options = {}) => http(url, 'POSt', data, options),
-  get: (url, data = {}, options = {}) => http(url, 'GET', data, options),
+  post: (url, data = {}, options = {}) => request.http(url, 'POSt', data, options),
+  get: (url, data = {}, options = {}) => request.http(url, 'GET', data, options),
 };
 
 module.exports = request;
