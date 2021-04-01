@@ -60,3 +60,7 @@ wxMiniStore 参考： (https://github.com/xiaoyao96/wxMiniStore)
 扩展微信小程序 api 支持 promise
 参考: (https://developers.weixin.qq.com/miniprogram/dev/extended/utils/api-promise.html)
 参考: (https://www.yuque.com/bigweb/xd1sgc/us1iqi)
+
+## CSS 命名规则
+
+- main-text--cloor
