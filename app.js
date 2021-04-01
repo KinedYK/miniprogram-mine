@@ -1,7 +1,9 @@
 //app.js
+require('./utils/promise.js');
 const http = require('./utils/request');
 const commonApis = require('./utils/api');
 const store = require('./utils/store');
+
 App({
   // 全局变量
   globalData: {
@@ -9,8 +11,9 @@ App({
   },
 
   // 挂载全局属性到APP实例
-  http,
   store,
+  $get: http.get,
+  $post: http.post,
   apis: commonApis,
 
   // 小程序冷启动回调

@@ -54,3 +54,9 @@ AppSecret 1604ee4ee80201402b8230bfe880620a
 ## 状态管理
 
 wxMiniStore 参考： (https://github.com/xiaoyao96/wxMiniStore)
+
+## API Promise 化
+
+扩展微信小程序 api 支持 promise
+参考: (https://developers.weixin.qq.com/miniprogram/dev/extended/utils/api-promise.html)
+参考: (https://www.yuque.com/bigweb/xd1sgc/us1iqi)
