@@ -64,3 +64,7 @@ wxMiniStore 参考： (https://github.com/xiaoyao96/wxMiniStore)
 ## CSS 命名规则
 
 - main-text--cloor
+
+## vant UI 组件库
+
+参考: (https://youzan.github.io/vant-weapp/#/quickstart)

@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/KinedYK/miniprogram-mine#readme",
   "dependencies": {
+    "@vant/weapp": "^1.6.8",
     "miniprogram-api-promise": "^1.0.4",
     "wxministore": "^1.3.1"
   }

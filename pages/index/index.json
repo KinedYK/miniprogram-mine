@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "首页",
   "usingComponents": {
-    "guide-page": "/components/guide/index"
+    "guide-page": "/components/guide/index",
+    "van-notice-bar": "@vant/weapp/notice-bar/index"
   }
 }
