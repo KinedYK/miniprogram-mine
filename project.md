@@ -61,6 +61,8 @@ wxMiniStore 参考： (https://github.com/xiaoyao96/wxMiniStore)
 参考: (https://developers.weixin.qq.com/miniprogram/dev/extended/utils/api-promise.html)
 参考: (https://www.yuque.com/bigweb/xd1sgc/us1iqi)
 
-## CSS 命名规则
+## CSS 命名规则 (BEM 命名模式)
 
-- main-text--cloor
+- block-element--modifier
+
+参考: (https://en.bem.info/methodology/css/)
